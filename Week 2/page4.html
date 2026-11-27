@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Registration Portal</title>
+</head>
+<body>
+
+    <div style="width: 82%; margin: 40px auto;">
+
+        <header>
+            <h1>Member Registration Portal</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="page1.html">Home (Page 1)</a></li>
+                    <li><a href="page2.html">About Me (Page 2)</a></li>
+                    <li><a href="page3.html">Markup Guide (Page 3)</a></li>
+                    <li><a href="page4.html">Register (Page 4)</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+
+        <main>
+            <h2>Create Your Membership Account</h2>
+            <p>
+                Complete the form below to register. Fields marked as required
+                must be completed before you submit the form.
+            </p>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Fieldset 1: Personal Details</legend>
+
+                    <p>
+                        <label for="full-name">Full Name:</label><br>
+                        <input type="text" id="full-name" name="full-name"
+                               autocomplete="name" required>
+                        <br>
+                        <small>Enter your first and last name.</small>
+                    </p>
+
+                    <p>
+                        <label for="email">Email Address:</label><br>
+                        <input type="email" id="email" name="email"
+                               autocomplete="email" required>
+                        <br>
+                        <small>Use a valid email address, for example name@example.com.</small>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone"
+                               pattern="[0-9]{10}" placeholder="0412345678"
+                               title="Enter a 10-digit phone number with no spaces."
+                               autocomplete="tel" required>
+                        <br>
+                        <small>Enter 10 digits with no spaces, for example 0412345678.</small>
+                    </p>
+
+                    <p>
+                        <label for="dob">Date of Birth:</label><br>
+                        <input type="date" id="dob" name="dob" required>
+                    </p>
+
+                    <p>
+                        <span>Gender:</span><br>
+                        <input type="radio" id="gender-female" name="gender" value="female" required>
+                        <label for="gender-female">Female</label><br>
+
+                        <input type="radio" id="gender-male" name="gender" value="male">
+                        <label for="gender-male">Male</label><br>
+
+                        <input type="radio" id="gender-other" name="gender" value="other">
+                        <label for="gender-other">Other</label><br>
+
+                        <input type="radio" id="gender-prefer-not" name="gender" value="prefer-not-to-say">
+                        <label for="gender-prefer-not">Prefer not to say</label>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Fieldset 2: Account &amp; Plan</legend>
+
+                    <p>
+                        <label for="username">Username:</label><br>
+                        <input type="text" id="username" name="username"
+                               minlength="4" maxlength="20"
+                               autocomplete="username" required>
+                        <br>
+                        <small>Choose a username between 4 and 20 characters.</small>
+                    </p>
+
+                    <p>
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="password" name="password"
+                               minlength="8" autocomplete="new-password" required>
+                        <br>
+                        <small>Your password must contain at least 8 characters.</small>
+                    </p>
+
+                    <p>Choose a Membership Tier:</p>
+
+                    <input type="radio" id="plan-free" name="membership" value="free" required>
+                    <label for="plan-free">Free</label><br>
+
+                    <input type="radio" id="plan-pro" name="membership" value="pro">
+                    <label for="plan-pro">Pro</label><br>
+
+                    <input type="radio" id="plan-enterprise" name="membership" value="enterprise">
+                    <label for="plan-enterprise">Enterprise</label>
+
+                    <p>
+                        <label for="experience">Coding Experience (years):</label><br>
+                        <input type="range" id="experience" name="experience"
+                               min="0" max="20" value="5">
+                        <br>
+                        <small>Move the slider to select between 0 and 20 years of experience.</small>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Fieldset 3: Preferences &amp; Terms</legend>
+
+                    <p>
+                        <label for="role">Your Role:</label><br>
+                        <select id="role" name="role" required>
+                            <option value="">-- Please select your role --</option>
+                            <option value="full-time-student">Full-Time Student</option>
+                            <option value="frontend-developer">Frontend Developer</option>
+                            <option value="full-stack-engineer">Full-stack Engineer</option>
+                            <option value="ui-ux-designer">UI/UX Designer</option>
+                            <option value="other-professional">Other Professional</option>
+                        </select>
+                    </p>
+
+                    <p>Newsletter Preferences:</p>
+
+                    <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                    <label for="newsletter">I would like to receive the newsletter.</label><br>
+
+                    <input type="checkbox" id="updates" name="updates" value="yes">
+                    <label for="updates">I would like to receive website and membership updates.</label>
+
+                    <p>
+                        <label for="bio">Short Biography:</label><br>
+                        <textarea id="bio" name="bio" rows="5" cols="50"
+                                  maxlength="500"
+                                  placeholder="Tell us a little about yourself..."></textarea>
+                        <br>
+                        <small>Optional: Write up to 500 characters about yourself and your interests.</small>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="terms" name="terms" value="accepted" required>
+                        <label for="terms">I have read and agree to the Terms of Service.</label>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <section>
+                    <h2>Data Protection and Privacy</h2>
+                    <p>
+                        The personal information submitted through this form is intended
+                        to be used for membership registration and account management.
+                        Please only provide information that is requested. Your details
+                        should be handled securely and should not be shared with others
+                        without an appropriate reason or your consent, in accordance
+                        with the organisation's privacy policy.
+                    </p>
+                </section>
+
+                <p>
+                    <button type="submit">Submit Registration</button>
+                    <button type="reset">Clear Form</button>
+                </p>
+
+            </form>
+        </main>
+
+        <hr>
+
+        <footer>
+            <p>&copy; 2026 My Web Project. Page 4 of 4.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
